@@ -1,0 +1,45 @@
+body {
+    background-color: beige;
+}
+
+#header-title {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.letter {
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.receipent {
+    font-weight: 600;
+}
+
+#subject {
+    text-decoration: underline;
+}
+
+.letter-content a {
+    text-decoration: none;
+    color: red;
+}
+
+.letter-content ul {
+    list-style: square;
+}
+
+
+.letter-content table {
+    border-collapse: collapse;
+}
+
+
+.letter-content table th,
+td {
+    border: 1px solid black;
+}
+
+.sender {
+    font-weight: 600;
+}
