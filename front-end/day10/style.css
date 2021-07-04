@@ -38,3 +38,24 @@
     height: 100%;
     display: none;
 }
+
+button.reload {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-left: -50px;
+    height: 30px;
+    width: 100px;
+    background-color: whitesmoke;
+    color: black;
+    border: 2px solid gray;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px grey;
+}
+
+button.reload:hover {
+    background-color: red;
+    color: whitesmoke;
+    margin-left: -48px;
+    box-shadow: none;
+}
