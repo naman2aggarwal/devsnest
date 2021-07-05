@@ -12,7 +12,7 @@ const gameCards = [
   "gengar",
   "bulbasaur",
 ];
-let prevCard = 0;
+let prevCardId = 0;
 let matchedCards = [];
 const shuffle = (array) => {
   var currentIndex = array.length,
@@ -34,6 +34,13 @@ const shuffle = (array) => {
   return array;
 };
 
+const checkWinner = () => {
+  if (!matchedCards.includes(false)) {
+    const winningHeader = document.querySelector(".win-message");
+    winningHeader.innerText = "Congratulations, You Won!";
+    reloadGame.focus();
+  }
+};
 const loadGame = () => {
   const shuffeledCards = shuffle(gameCards.concat(gameCards));
   let i = 0;
@@ -58,41 +65,49 @@ const vanishCards = (firstCard, secCard) => {
 };
 
 const flipCard = (e) => {
-  let selectedCard = parseInt(e.currentTarget.id);
-  if (matchedCards[selectedCard - 1]) {
+  let selectedCardId = parseInt(e.currentTarget.id);
+  let selectedCard = e.currentTarget;
+  if (matchedCards[selectedCardId - 1]) {
     return;
   }
+  selectedCard.classList.add("flip");
   let unhiddenCard = document
-    .getElementById(selectedCard)
+    .getElementById(selectedCardId)
     .querySelector(".unhide");
-  let hiddenCard = document.getElementById(selectedCard).querySelector(".hide");
-  if (prevCard === 0) {
-    prevCard = selectedCard;
+  let hiddenCard = document
+    .getElementById(selectedCardId)
+    .querySelector(".hide");
+  if (prevCardId === 0) {
+    prevCardId = selectedCardId;
     flipCardFace(unhiddenCard, hiddenCard);
-  } else if (prevCard !== selectedCard) {
+  } else if (prevCardId !== selectedCardId) {
+    let prevCard = document.getElementById(prevCardId);
     let prevUnhiddenCard = document
-      .getElementById(prevCard)
+      .getElementById(prevCardId)
       .querySelector(".unhide");
     let prevHiddenCard = document
-      .getElementById(prevCard)
+      .getElementById(prevCardId)
       .querySelector(".hide");
     flipCardFace(unhiddenCard, hiddenCard);
 
     if (
       prevUnhiddenCard.getAttribute("src") === unhiddenCard.getAttribute("src")
     ) {
-      matchedCards[prevCard - 1] = true;
-      matchedCards[selectedCard - 1] = true;
-      prevCard = 0;
+      matchedCards[prevCardId - 1] = true;
+      matchedCards[selectedCardId - 1] = true;
+      prevCardId = 0;
       setTimeout(() => {
         vanishCards(prevUnhiddenCard, unhiddenCard);
       }, 500);
+      checkWinner();
     } else {
-      prevCard = 0;
+      prevCardId = 0;
       setTimeout(() => {
+        prevCard.classList.remove("flip");
         flipCardFace(prevHiddenCard, prevUnhiddenCard);
       }, 500);
       setTimeout(() => {
+        selectedCard.classList.remove("flip");
         flipCardFace(hiddenCard, unhiddenCard);
       }, 1000);
     }

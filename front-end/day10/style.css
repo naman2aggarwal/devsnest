@@ -23,9 +23,10 @@
 .card {
     width: 125px;
     height: 125px;
-    padding: 2px;
     background-color: whitesmoke;
     border: 2px solid black;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease-in 0s;
 }
 
 .hide {
@@ -37,6 +38,7 @@
     width: 100%;
     height: 100%;
     display: none;
+    transform: rotateY(180deg);
 }
 
 button.reload {
@@ -53,9 +55,27 @@ button.reload {
     box-shadow: 2px 2px 2px grey;
 }
 
+button.reload:focus {
+    transform: scale(1.5, 1.5);
+    background-color: green;
+    color: whitesmoke;
+}
+
 button.reload:hover {
     background-color: red;
     color: whitesmoke;
     margin-left: -48px;
     box-shadow: none;
+}
+
+
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+header.win-message {
+    font-size: 5vh;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
 }
