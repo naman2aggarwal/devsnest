@@ -1,0 +1,12 @@
+.chess-square {
+    width: 100%;
+    height: 100%;
+}
+
+.chess-square.white {
+    background-color: white;
+}
+
+.chess-square.black {
+    background-color: black;
+}
