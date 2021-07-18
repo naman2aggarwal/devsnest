@@ -1,0 +1,15 @@
+.card {
+    background-color: rgb(107, 142, 35);
+    box-shadow: 3px 1px 9px -1px rgb(61, 88, 26);
+    margin: 4px 8px;
+}
+
+.card h2,
+h3 {
+    padding: 8px;
+}
+
+.card button {
+    margin-left: 8px;
+    padding: 4px;
+}
