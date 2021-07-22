@@ -1,0 +1,14 @@
+form input {
+    margin: 4px;
+    padding: 4px;
+    width: 20vw;
+}
+
+form button {
+    margin: 4px;
+    padding: 8px;
+    width: 25%;
+    background-color: darkcyan;
+    color: white;
+    border-style: none;
+}

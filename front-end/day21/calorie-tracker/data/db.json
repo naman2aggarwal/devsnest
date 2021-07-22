@@ -1,0 +1,24 @@
+{
+  "foodItems": [
+    {
+      "id": 1,
+      "foodName": "Pizza",
+      "calorie": 45
+    },
+    {
+      "id": 2,
+      "foodName": "Pasta",
+      "calorie": 46
+    },
+    {
+      "id": 3,
+      "foodName": "Fried Rice",
+      "calorie": 55
+    },
+    {
+      "foodName": "coke",
+      "calorie": "45",
+      "id": 4
+    }
+  ]
+}

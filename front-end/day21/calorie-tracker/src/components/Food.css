@@ -1,0 +1,39 @@
+.card {
+    margin: 4px auto;
+    width: 30vw;
+    background-color: lightgrey;
+    border-radius: 4px;
+}
+
+.card-title {
+    padding: 8px 0px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.card-desc {
+    padding: 8px 0px;
+    font-size: 1rem;
+}
+
+button.btn {
+    width: 80px;
+    color: white;
+    margin: 8px 16px;
+    padding: 4px;
+    border-style: none;
+}
+
+button.btn-danger {
+    background-color: red;
+}
+
+button.btn-info {
+    background-color: darkcyan;
+}
+
+form input {
+    margin: 4px;
+    padding: 4px;
+    width: 20%;
+}
