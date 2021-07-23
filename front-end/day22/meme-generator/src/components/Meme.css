@@ -1,0 +1,40 @@
+.meme-img {
+    width: 50vw;
+    height: 50vh;
+    margin: 5vh 25vw;
+    border: 2px solid black;
+}
+
+
+
+
+.meme-captions input {
+    display: block;
+    margin: auto;
+    width: 10vw;
+    margin: 1vh 47.5vw;
+}
+
+.action-buttons {
+    margin: 0 40vw;
+}
+
+.btn {
+    margin: 10px 5vw;
+    padding: 4px;
+
+    border: 1px solid black;
+    width: 15vw;
+    height: fit-content;
+}
+
+.btn-primary {
+    background-color: crimson;
+    color: white;
+
+}
+
+.btn-secondary {
+    color: crimson;
+
+}
