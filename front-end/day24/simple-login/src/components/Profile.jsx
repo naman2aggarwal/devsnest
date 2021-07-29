@@ -1,7 +1,7 @@
 const Profile = () => {
   return (
-    <div className="profile">
-      <h2>Profile: Private Route</h2>
+    <div className="text-center">
+      <h2 className="text-2xl mt-4">Profile: Private Route</h2>
     </div>
   );
 };
