@@ -1,12 +1,14 @@
 import "./App.css";
 import AddTodo from "./components/AddTodo";
 import ListTodo from "./components/ListTodo";
+import { Container } from "react-bootstrap";
+
 function App() {
   return (
-    <div className="App">
+    <Container>
       <AddTodo />
       <ListTodo />
-    </div>
+    </Container>
   );
 }
 
